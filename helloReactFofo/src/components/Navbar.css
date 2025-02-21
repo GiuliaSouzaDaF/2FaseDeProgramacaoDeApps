@@ -1,0 +1,7 @@
+.container-navbar{
+    height: 60px;
+    background-color: rgb(253, 201, 233);
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid black;
+    border-radius: 10px;
+}
