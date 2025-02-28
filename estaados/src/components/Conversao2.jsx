@@ -1,30 +1,31 @@
+import { useState } from "react"
+import './Conversao2.css'
+
 function Conversao2() {
     const [km, setKm] = useState(0)
-    const [milhas,setMilhas] = useState(0)
-    const [leguas,setLeguas] = useState(0)
-function converterKmParaMilhas(){
-    let entrada = Number(prompt("Km: "))
-    setKm((entrada *0,6214).toFixed(2))
-    setLeguas((entrada *0,207124).toFixed(2))
-    setMilhas(entrada)
-}
-
+    const [milha, setMilha] = useState(0)
+    const [legua, setLegua] = useState(0)
+    function converterKmParaMilha(){
+        let entrada = Number(prompt("km:"))
+        setMilha(entrada * 0.621371)
+        setLegua(entrada * 0.207124)
+        setKm(entrada)
+    }
   return (
-    <div className='container-conversao2'>
-    <h2>km ➡️ milhas➡️léguas</h2>
-    <button onClick={converterKmParaMilhas}>Converter</button>
+    <div className="container-conversao2">
+        <h2>km ➡️ milhas ➡️ léguas</h2>
+        <button onClick={converterKmParaMilha}>Converter</button>
+        <p>
+            Km: {km}
+        </p>
+        <p>
+            Milhas: {milha}
+        </p>
+        <p>
+            Léguas: {legua}
+        </p>
 
-   <p>
-    Km: {km}
-    </p> 
-    <p>
-    Milhas: {milhas}
-    </p>
-    <p>
-        Leguas: {leguas}
-    </p>
-            
-        </div>
+    </div>
   )
 }
 
